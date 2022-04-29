@@ -1,0 +1,18 @@
+POST http://localhost:3001/api/users/signup
+Content-Type: application/json
+
+{
+	"email": "John Wick",
+	"password": "test"
+}
+
+###
+
+POST http://localhost:3001/api/users/login
+Content-Type: application/json
+
+{
+	"email": "ntkafktlvac@gmail.com",
+	"password": "ifqr"
+}
+
