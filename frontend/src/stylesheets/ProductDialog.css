@@ -1,0 +1,31 @@
+.product-dialog{
+    border-width: 0px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+dialog{
+    border:none;
+    border-radius: 8px;
+}
+.product-dialog-image{
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.product-dialog-details{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-dialog-name{
+    font-weight: bold;
+}
+
+.close-dialog-button{
+    width: 10%;
+    margin-left: auto;
+}
+

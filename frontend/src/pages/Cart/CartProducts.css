@@ -1,0 +1,9 @@
+#cart-products{
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	padding: 10px;
+	gap: 20px;
+	width: 100%;
+}

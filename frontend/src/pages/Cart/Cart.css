@@ -1,0 +1,17 @@
+#cart{
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	height: 100%;
+}
+
+#cart-title{
+	font-family: 'Exo 2';
+	font-size: xxx-large;
+}
+
+.cart-total{
+	font-size: xx-large;
+}
