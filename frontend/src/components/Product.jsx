@@ -6,15 +6,16 @@ import axios from 'axios';
 import '../stylesheets/Product.css'
 import cart from '../util/cartData';
 
-export default ({ key, id, productName, productPrice, productSeller, productImage, setContextValue, productRating }) => {
+export default ({ key, id, productName, productPrice, productSeller, productImage, setContextValue, productRating, productStock }) => {
 	
 	const [ buttonAction, setButtonAction] = useState("/graphics/add-button.svg")
 	const [ rating, setRating ]  = useState({ value: productRating, initial: true});
 	const productData = {
+		productId: id,
 		productName: productName,
 		productPrice: productPrice,
-		productImage: productImage,
-		productSeller: productSeller,
+		productStock: productStock,
+		productRating: rating,
 		active: true
 	}
 
@@ -84,12 +85,11 @@ export default ({ key, id, productName, productPrice, productSeller, productImag
 	return(
 		<div className="product-card" >
 			<img className="product-action-button" onClick={ e => { buttonHandler() } }src={ buttonAction }/>
-			<img className="product-image" src={productImage} onClick={ e => setContextValue(productData) } />
 			<div className="product-details" onClick={ e => setContextValue(productData) }>
-				<span className="product-name">{ productName }</span>
-				<span className="product-price">{ productPrice }</span>
-			</div>
-			<select name="Rating" className="rating-dropdown" value={productRating} onChange={e => setRating({value: e.target.value, initial: false})}>
+				<span className="product-name">{ "Name : "+productName }</span>
+				<span className="product-price">{ "Rs."+productPrice }</span>
+				<span className="product-stock">{ "Stock : "+productStock }</span>
+				<select name="Rating" className="rating-dropdown" value={productRating} onChange={e => setRating({value: e.target.value, initial: false})}>
 					<option value="null"></option>
 					<option value="5">5</option>
 					<option value="4">4</option>
@@ -97,6 +97,7 @@ export default ({ key, id, productName, productPrice, productSeller, productImag
 					<option value="2">2</option>
 					<option value="1">1</option>
 				</select>
+			</div>
 		</div>
 	);
 }

@@ -1,4 +1,6 @@
 .product-dialog{
+    height: 10rem;
+    width: 40rem;
     border-width: 0px;
     border-radius: 8px;
     display: flex;
@@ -25,7 +27,8 @@ dialog{
 }
 
 .close-dialog-button{
-    width: 10%;
+    width: 2%;
     margin-left: auto;
+    margin-bottom: 3rem;
 }
 
