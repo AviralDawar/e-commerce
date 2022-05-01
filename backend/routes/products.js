@@ -6,9 +6,19 @@ router.get("/", async (req, res) => {
 	
 	req.headers.authorization && db.query(`
 		SELECT 
-			*
+			product.product_id,
+			name,
+			stock,
+			price,
+			category_id,
+			rating
 		FROM
 			product
+		LEFT JOIN
+			rating
+		ON
+			customer_id=${req.headers.authorization} AND
+			product.product_id=rating.product_id
 	`,
 
 	(err, results) => {

@@ -29,7 +29,7 @@ export default () => {
 
 					let tempProduct = []
 					for (let i = 0; i < allProducts.data.products.length; i++){
-						tempProduct.push(<Product key={allProducts.data.products[i].product_id} id={allProducts.data.products[i].product_id} productName={allProducts.data.products[i].name} productPrice={allProducts.data.products[i].price} setContextValue={setContextValue}/>)
+						tempProduct.push(<Product key={allProducts.data.products[i].product_id} id={allProducts.data.products[i].product_id} productName={allProducts.data.products[i].name} productPrice={allProducts.data.products[i].price} setContextValue={setContextValue} productRating={allProducts.data.products[i].rating}/>)
 					}
 					setProductArray(tempProduct)
 				}

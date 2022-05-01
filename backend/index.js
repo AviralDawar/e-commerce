@@ -5,6 +5,7 @@ const cors = require('cors')
 let usersRouter = require('./routes/users')
 let productsRouter = require('./routes/products')
 let cartRouter = require('./routes/cart')
+let rateRouter = require('./routes/rate')
 
 let app = express()
 app.use(cors())
@@ -12,6 +13,7 @@ app.use(express.json())
 app.use('/api/users', usersRouter)
 app.use('/api/products', productsRouter)
 app.use('/api/cart', cartRouter)
+app.use('/api/rate', rateRouter)
 
 const port = process.env.PORT || 3001
 app.listen(port, () => {
